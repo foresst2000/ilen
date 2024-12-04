@@ -1,8 +1,12 @@
 def slen(item = None) -> int:
-    if item is None or len(item) == 0 or item is not str or item is not list:
+    if item is None or len(item) == 0:
         # checks
         return 0
 
+    if item is not str and item is not list:
+        # check #2
+        return 0
+    
     length: int = -1
 
     for v in item:
