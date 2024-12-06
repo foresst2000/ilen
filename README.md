@@ -1,17 +1,16 @@
-# slen
-A basic module for Python that is an alternative to ``len()``. Rather then returning the full length of the table, 
-it returns the location of the last item in that table.
+# ilen (index-len)
+This is a very basic Python module that checks for length of strings and lists like ``len()``, however, it returns the **index of the last item**, rather than the length of the whole table.
 
-## Usage
+## Usage Example
 ```py
-from slen import slen
+from ilen import ilen
 
-slen("hello world!") # 11
-slen([1, 5, 7, 2, 9, 31, 5]) # 6
-slen() # 0
+# Get the last item in the table
+table_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 01, 11]
+table_1_last_item = ilen(table_1) # 11
 
-my_table = [1, 2, 3, 4, 5, 6]
+string_1 = "1 2 3 4 5 6 7 8 9 01 11"
+string_1_last_char = ilen(string_1) # 1
 
-last_item_of_my_table = my_table[slen(my_table)] # 6
-index_of_last_item_of_my_table = slen(my_table) # 5
+print(str(table_1_last_item) + string_1_last_char) # 111
 ```
