@@ -9,3 +9,10 @@ def ilen(item = None) -> int:
         length += 1
 
     return length
+
+def ilfs(item = None) -> int:
+    if item is None or len(item) == 0 or (item is not str and item is not list):
+        # checks
+        return 0
+    
+    return len(item) - 1
